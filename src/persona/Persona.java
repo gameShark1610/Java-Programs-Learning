@@ -1,7 +1,7 @@
 package persona;
 
 public class Persona{
-    static int contadorPersonas = 0;
+    private static int contadorPersonas = 0;
     private int idPersona;
     private String nombre;
     private String apellido;
@@ -38,6 +38,10 @@ public class Persona{
 
     public int getIdPersona() {
         return this.idPersona;
+    }
+
+    public static int getContadorPersonas() {
+        return Persona.contadorPersonas;
     }
 }
 
