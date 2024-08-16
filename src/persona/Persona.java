@@ -2,6 +2,7 @@ package persona;
 
 public class Persona{
     static int contadorPersonas = 0;
+    private int idPersona;
     private String nombre;
     private String apellido;
 
@@ -9,12 +10,13 @@ public class Persona{
         this.nombre = nombre;
         this.apellido = apellido;
         // Incrementar el atributo static
-        Persona.contadorPersonas++;
+        this.idPersona= ++Persona.contadorPersonas;
     }
 
     @Override
     public String toString(){
-        return "Nombre: " + this.nombre + ", Apellido: " + this.apellido
+        return "Id: " + this.idPersona
+                + ", Nombre: " + this.nombre + ", Apellido: " + this.apellido
                 + ", Dir. Mem. " + super.toString();
     }
 
@@ -32,6 +34,10 @@ public class Persona{
 
     public void setApellido(String apellido) {
         this.apellido = apellido;
+    }
+
+    public int getIdPersona() {
+        return this.idPersona;
     }
 }
 
