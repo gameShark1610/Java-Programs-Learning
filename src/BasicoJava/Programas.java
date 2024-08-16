@@ -1,3 +1,5 @@
+package BasicoJava;
+
 public class Programas {
     public static void main(String[] args) {
         System.out.println("***Generador de Gmail***");
