@@ -1,4 +1,4 @@
-package BasicoJava;
+package basicoJava;
 
 public class Programas {
     public static void main(String[] args) {
