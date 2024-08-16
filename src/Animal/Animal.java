@@ -18,6 +18,8 @@ class Perro extends Animal{
     @Override
     protected void dormir() {
         System.out.println("Duermo 15 horas al día");
+        System.out.println("Metodo clase Padre: ");
+        super.dormir();
     }
 }
 
