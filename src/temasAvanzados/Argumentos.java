@@ -1,4 +1,4 @@
-package TemasAvanzados;
+package temasAvanzados;
 
 public class Argumentos {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package TemasAvanzados;
+package temasAvanzados;
 
 public interface InterfacesTraductor {
     // public y abstract

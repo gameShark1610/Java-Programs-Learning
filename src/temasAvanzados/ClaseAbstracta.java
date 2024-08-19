@@ -1,4 +1,4 @@
-package TemasAvanzados;
+package temasAvanzados;
 
 public class ClaseAbstracta {
     public static void main(String[] args) {
