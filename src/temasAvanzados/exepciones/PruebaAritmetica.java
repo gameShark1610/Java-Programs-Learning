@@ -7,7 +7,7 @@ public class PruebaAritmetica {
             System.out.println("resultado = " + resultado);
         } catch (Exception e) {
             System.out.println("Ocurrio un error : "+ e);
-        }Ex
+        }
         finally {
             System.out.println("Se reviso la division entre cero");
         }
