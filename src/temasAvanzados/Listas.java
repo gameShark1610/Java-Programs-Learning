@@ -5,7 +5,7 @@ import java.util.List;
 
 public class Listas {
     public static void main(String[] args) {
-        List miLista = new ArrayList();
+        List<String> miLista = new ArrayList<>();
         miLista.add("Lunes");
         miLista.add("Martes");
         miLista.add("Miercoles");
