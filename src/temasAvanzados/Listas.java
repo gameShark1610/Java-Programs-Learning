@@ -15,9 +15,14 @@ public class Listas {
         miLista.add("Domingo");
         miLista.add("Domingo");
 
-        for (Object elemento: miLista){
+        for (String elemento: miLista){
             System.out.println(elemento);
         }
+
+        // Funciones lambda (funcion anonima de un codigo muy compacto)
+        miLista.forEach(elemento -> {
+            System.out.println("elemento = " + elemento);
+        });
 
     }
 }
