@@ -32,10 +32,36 @@ public class ServicioSnacksArchivos implements IServicioSnacks{
         } catch (Exception e) {
             System.out.println("Error al crear el archivo: "+ e.getMessage());
         }
+
+        if (!existe) cargarSnacksIniciales();
+    }
+
+    public  void cargarSnacksIniciales(){
+        this.agregarSnack(new Snack("Papas",70));
+        this.agregarSnack(new Snack("Refresco",50));
+        this.agregarSnack(new Snack("Sandwich",120));
+
+    }
+
+    private void agregarSnackArchivo(Snack snack){
+        boolean anexar = false;
+        var archivo = new File(NOMBRE_ARCHIVO);
+        try {
+            anexar = archivo.exists();
+            var salida= new PrintWriter(new FileWriter(archivo,anexar));
+            salida.println(snack);
+            salida.close(); //Se escribe la informacion en el archivo
+        } catch (Exception e) {
+            System.out.println("Error al agregar snack: "+ e.getMessage());
+        }
     }
 
     @Override
     public void agregarSnack(Snack snack) {
+        // Agregamos el nuevo snack, 1. a la lista en memorio
+        this.snacks.add(snack);
+        // 2. Guardamos el snack en el archivo
+        this.agregarSnackArchivo(snack);
 
     }
 
