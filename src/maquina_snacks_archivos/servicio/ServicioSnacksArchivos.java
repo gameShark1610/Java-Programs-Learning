@@ -49,7 +49,7 @@ public class ServicioSnacksArchivos implements IServicioSnacks{
         try {
             anexar = archivo.exists();
             var salida= new PrintWriter(new FileWriter(archivo,anexar));
-            salida.println(snack);
+            salida.println(snack.escribirSnack());
             salida.close(); //Se escribe la informacion en el archivo
         } catch (Exception e) {
             System.out.println("Error al agregar snack: "+ e.getMessage());
